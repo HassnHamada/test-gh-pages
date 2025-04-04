@@ -1,0 +1,55 @@
+{
+  "homepage": "https://hassnhamada.github.io/test-gh-pages",
+  "name": "gitpages",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.126",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.9.5"
+  },
+  "scripts": {
+    "start": "nx serve",
+    "build": "nx run-many -t build",
+    "test": "nx test",
+    "dev": "nx serve",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d dist/gitpages",
+    "mini-ci": "biome format --write && nx affected -t typecheck && nx affected -t eslint:lint --max-warnings=0 && CI=true nx affected -t test"
+  },
+  "eslintConfig": {
+    "extends": ["react-app", "react-app/jest"]
+  },
+  "browserslist": {
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@nx/vite": "20.7.1",
+    "@nx/web": "20.7.1",
+    "@rollup/plugin-replace": "^6.0.2",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "@vitest/ui": "^3.0.0",
+    "eslint-config-react-app": "^7.0.1",
+    "gh-pages": "^6.3.0",
+    "jest-watch-typeahead": "^2.2.2",
+    "jiti": "2.4.2",
+    "nx": "20.7.1",
+    "vite": "^6.2.5",
+    "vitest": "^3.1.1",
+    "web-vitals": "^4.2.4"
+  }
+}
