@@ -22,7 +22,7 @@
     "test": "nx test",
     "dev": "nx serve",
     "predeploy": "yarn run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d dist/gitpages",
     "mini-ci": "biome format --write && nx affected -t typecheck && nx affected -t eslint:lint --max-warnings=0 && CI=true nx affected -t test"
   },
   "eslintConfig": {
