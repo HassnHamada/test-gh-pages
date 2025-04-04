@@ -17,5 +17,9 @@
       }
     }
   ],
-  "nxCloudId": "67f034c6c0f89669bf291bc5"
+  "nxCloudId": "67f034c6c0f89669bf291bc5",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "nxCloudAccessToken": "OWM4MjIyMjgtMjZmOC00ZjY1LWI5NDctMjIxNmZiMDNkNTEzfHJlYWQtd3JpdGU="
 }

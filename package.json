@@ -21,7 +21,7 @@
     "build": "nx build",
     "test": "nx test",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "mini-ci": "biome format --write && nx affected -t typecheck && nx affected -t eslint:lint --max-warnings=0 && CI=true nx affected -t test",
     "dev": "nx serve"
   },
@@ -37,7 +37,7 @@
     ]
   },
   "devDependencies": {
-    "@nx/vite": "20.7.1",
+    "@nx/vite": "18.0.4",
     "@nx/web": "20.7.1",
     "@rollup/plugin-replace": "^6.0.2",
     "@testing-library/jest-dom": "^6.6.3",
@@ -47,9 +47,12 @@
     "gh-pages": "^6.3.0",
     "jest-watch-typeahead": "^2.2.2",
     "jiti": "2.4.2",
-    "nx": "20.7.1",
+    "nx": "18.0.4",
     "vite": "^6.2.5",
     "vitest": "^3.1.1",
     "web-vitals": "^4.2.4"
+  },
+  "nx": {
+    "includedScripts": []
   }
 }
