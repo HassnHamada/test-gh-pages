@@ -20,7 +20,7 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "predeploy": "npm run build",
+    "predeploy": "yarn run build",
     "deploy": "gh-pages -d dist",
     "mini-ci": "biome format --write && nx affected -t typecheck && nx affected -t eslint:lint --max-warnings=0 && CI=true nx affected -t test",
     "dev": "nx serve"
