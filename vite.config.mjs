@@ -33,4 +33,5 @@ export default defineConfig({
     replace({ values: craEnvVars, preventAssignment: true }),
     nxViteTsPaths(),
   ],
+  base: '/test-gh-pages/',
 })
