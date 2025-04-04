@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Don't Say Hi
+          Say Hi Again
         </a>
       </header>
     </div>
