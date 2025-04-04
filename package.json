@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "nx serve",
-    "build": "nx build",
+    "build": "nx run-many -t build",
     "test": "nx test",
     "dev": "nx serve",
     "predeploy": "yarn run build",
@@ -26,17 +26,10 @@
     "mini-ci": "biome format --write && nx affected -t typecheck && nx affected -t eslint:lint --max-warnings=0 && CI=true nx affected -t test"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": ["react-app", "react-app/jest"]
   },
   "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
+    "production": [">0.2%", "not dead", "not op_mini all"],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
